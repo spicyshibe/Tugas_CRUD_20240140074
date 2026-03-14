@@ -9,7 +9,7 @@ public class KtpMapper {
     public KtpDTO toDTO(Ktp entity) {
         KtpDTO dto = new KtpDTO();
         dto.setId(entity.getId());
-        dto.setNIK(entity.getNIK());
+        dto.setNik(entity.getNik());
         dto.setNamaLengkap(entity.getNamaLengkap());
         dto.setAlamat(entity.getAlamat());
         dto.setTanggalLahir(entity.getTanggalLahir());
@@ -20,7 +20,7 @@ public class KtpMapper {
     public Ktp toEntity(KtpDTO dto) {
         Ktp entity = new Ktp();
         entity.setId(dto.getId());
-        entity.setNIK(dto.getNIK());
+        entity.setNik(dto.getNik());
         entity.setNamaLengkap(dto.getNamaLengkap());
         entity.setAlamat(dto.getAlamat());
         entity.setTanggalLahir(dto.getTanggalLahir());

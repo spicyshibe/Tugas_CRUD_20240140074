@@ -6,7 +6,7 @@ import java.time.LocalDate;
 @Data
 public class KtpDTO {
     private Integer id;
-    private String NIK;
+    private String nik;
     private String namaLengkap;
     private String alamat;
     private LocalDate tanggalLahir;

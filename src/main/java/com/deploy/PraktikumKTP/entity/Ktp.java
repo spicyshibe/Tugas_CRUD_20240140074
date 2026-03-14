@@ -12,10 +12,9 @@ public class Ktp {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(unique = true, nullable = false)
-    private String NIK;
-    private String namaLengkap;
-    private String alamat;
+    private String nik;           // nyari kolom 'nik'
+    private String namaLengkap;   // nyari kolom 'nama_lengkap'
+    private String alamat;        // nyari kolom 'alamat'
     private LocalDate tanggalLahir;
     private String jenisKelamin;
 }

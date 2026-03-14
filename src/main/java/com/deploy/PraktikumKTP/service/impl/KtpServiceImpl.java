@@ -23,7 +23,7 @@ public class KtpServiceImpl implements KtpService {
         return mapper.toDTO(entity);
     }
     @Override public KtpDTO save(KtpDTO dto) {
-        if(repository.findByNIK(dto.getNIK()).isPresent()) throw new RuntimeException("KTP Duplikat");
+        if(repository.findByNik(dto.getNik()).isPresent()) throw new RuntimeException("KTP Duplikat");
         return mapper.toDTO(repository.save(mapper.toEntity(dto)));
     }
     @Override public KtpDTO update(Integer id, KtpDTO dto) {

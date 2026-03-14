@@ -7,5 +7,5 @@ import java.util.Optional;
 
 @Repository
 public interface KtpRepository extends JpaRepository<Ktp, Integer> {
-    Optional<Ktp> findByNIK(String NIK);
+    Optional<Ktp> findByNik(String nik); // Harus 'Nik' (N besar, ik kecil)
 }
