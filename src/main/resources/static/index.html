@@ -46,8 +46,8 @@
   <form id="ktpForm">
     <input type="hidden" id="id">
     <div class="form-group">
-      <label>Nomor KTP:</label>
-      <input type="text" id="nomorKtp" placeholder="Masukkan 16 digit NIK" required>
+      <label>NIK:</label>
+      <input type="text" id="NIK" placeholder="Masukkan 16 digit NIK" required>
     </div>
     <div class="form-group">
       <label>Nama Lengkap:</label>
@@ -101,7 +101,7 @@
       const url = id ? `${API_URL}/${id}` : API_URL;
 
       const ktpData = {
-        nomorKtp: $('#nomorKtp').val(),
+        NIK: $('#NIK').val(),
         namaLengkap: $('#namaLengkap').val(),
         alamat: $('#alamat').val(),
         tanggalLahir: $('#tanggalLahir').val(),
@@ -139,7 +139,7 @@
         data.forEach(ktp => {
           rows += `
                         <tr>
-                            <td>${ktp.nomorKtp}</td>
+                            <td>${ktp.NIK}</td>
                             <td>${ktp.namaLengkap}</td>
                             <td>${ktp.jenisKelamin}</td>
                             <td>
@@ -178,7 +178,7 @@
   function editData(id) {
     $.get(`${API_URL}/${id}`, function(data) {
       $('#id').val(data.id);
-      $('#nomorKtp').val(data.nomorKtp);
+      $('#NIK').val(data.NIK);
       $('#namaLengkap').val(data.namaLengkap);
       $('#alamat').val(data.alamat);
       $('#tanggalLahir').val(data.tanggalLahir);
